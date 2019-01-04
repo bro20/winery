@@ -9,16 +9,11 @@ class AppMenu extends Component {
 	};
 
 	render() {
-		const { collapsed } = this.state;
-
 		return (
-			<React.Fragment>
-				<Menu mode="inline" theme="dark" inlineCollapsed={collapsed}>
-					<Item>Option1</Item>
-					<Item>Option2</Item>
-					<Item>Option3</Item>
-				</Menu>
-			</React.Fragment>
+			<Menu mode="inline" theme="dark">
+				<Item>Search</Item>
+				<Item>Add</Item>
+			</Menu>
 		);
 	}
 }

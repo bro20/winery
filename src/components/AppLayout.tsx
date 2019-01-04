@@ -1,32 +1,20 @@
 import React, { Component } from "react";
 import { Layout } from "antd";
 import AppMenu from "./AppMenu";
-import WinesTable from "./WinesTable";
-import AddWineButton from "./AddWineButton";
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Sider, Content, Footer } = Layout;
 
 class AppLayout extends Component {
-	state = {
-		collapsed: false,
-	};
-
 	render() {
 		return (
-			<Layout>
+			<React.Fragment>
+				<Header />
 				<Sider>
 					<AppMenu />
 				</Sider>
-				<Layout>
-					<Header />
-					<Content>
-						<WinesTable />
-					</Content>
-					<Footer>
-						<AddWineButton />
-					</Footer>
-				</Layout>
-			</Layout>
+				<Content />
+				<Footer />
+			</React.Fragment>
 		);
 	}
 }

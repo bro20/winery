@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { Row, Col, Form, Icon, Input, Button } from "antd";
+import { Layout, Row, Col, Form, Icon, Input, Button } from "antd";
 
 const { Item } = Form;
+const { Header, Footer } = Layout;
 
 interface SignInProps {
 	username: String;
@@ -38,7 +39,7 @@ class SignIn extends Component<SignInProps> {
 
 		return (
 			<React.Fragment>
-				<Row style={{ height: 100, backgroundColor: "black" }} />
+				<Header />
 				<Row style={{ marginTop: 25 }}>
 					<Col span={8} />
 					<Col span={8}>
@@ -51,7 +52,9 @@ class SignIn extends Component<SignInProps> {
 									prefix={
 										<Icon
 											type="user"
-											style={{ color: "rgba(0,0,0,.25)" }}
+											style={{
+												color: "rgba(0,0,0,.25)",
+											}}
 										/>
 									}
 									placeholder="Username"
@@ -64,7 +67,9 @@ class SignIn extends Component<SignInProps> {
 									prefix={
 										<Icon
 											type="lock"
-											style={{ color: "rgba(0,0,0,.25)" }}
+											style={{
+												color: "rgba(0,0,0,.25)",
+											}}
 										/>
 									}
 									type="password"
@@ -86,6 +91,7 @@ class SignIn extends Component<SignInProps> {
 					</Col>
 					<Col span={8} />
 				</Row>
+				<Footer />
 			</React.Fragment>
 		);
 	}
